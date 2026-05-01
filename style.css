@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/* root - cores - fonte */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(imgs/meu-amor.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+
+main{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 10px;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #d5d5d5;
+    border: 3px solid #474646;
+    transition: background-color .5s ease;
+}
+
+.home:hover{
+    background-color: #b3b3b3;
+}
+
+.conteiner{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    padding: 20px;
+}
+
+.app{
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: center;
+    transition: transform .5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.app:hover{
+    transform: scale(1.1);
+}
+
+.gallery{
+    background-image: url(imgs/gallery.jpg);
+}
+
+.ttk{
+    background-image: url(imgs/ttk.jpg);
+}
+
+.spotify{
+    background-image: url(imgs/spotify.jpg);
+}
+
+.zap{
+    background-image: url(imgs/zap.jpg);
+}
+
+.catalogo-sites{
+    background-image: url(imgs/site.jpg);
+}
+
+.bloco-de-notas{
+    background-image: url(imgs/bloco-de-nota.jpg);
+}
