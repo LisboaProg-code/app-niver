@@ -25,7 +25,7 @@ main{
     flex-flow: column;
     justify-content: space-between;
     align-items: start;
-    padding-bottom: 10px;
+    padding: 20px 0;
 }
 
 header{
@@ -35,8 +35,8 @@ header{
 }
 
 .home{
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     background-color: #d5d5d5;
     border: 3px solid #474646;
@@ -60,8 +60,8 @@ header{
 
 .app{
     border-radius: 10px;
-    width: 100%;
-    height: 80px;
+    width: 90%;
+    height: 70px;
     background-size: cover;
     background-repeat: no-repeat;
     background-repeat: center;
@@ -96,3 +96,19 @@ header{
 .bloco-de-notas{
     background-image: url(imgs/bloco-de-nota.jpg);
 }
+
+.centro-app{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telefone{
+    background-image: url(imgs/telefone.jpg);
+}
+
+.gift{
+    background-image: url(imgs/gift.png);
+}
+
