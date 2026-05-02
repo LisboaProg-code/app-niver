@@ -175,7 +175,7 @@ main{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding: 20px 0px;
 }
 
@@ -194,8 +194,8 @@ main{
 }
 
 .bottom-menu button{
-    font-size: 2rem;
-    padding: 10px;
+    font-size: 1.7rem;
+    padding: 15px;
     border: none;
     background-color: white;
     transition: background-color .5s ease;
