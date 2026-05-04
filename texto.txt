@@ -1,0 +1,31 @@
+.msc-slide{
+    display: flex;
+    width: 100%;
+    height: calc((100vh - 70px) / 10);
+    flex-flow: row;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-left: 10px;
+}
+
+.msc-slide-right{
+    display: flex;
+}
+
+.msc-slide img{
+    width: 50px;
+    height: 50px;
+}
+
+.titulo-msc{
+    padding-left: 10px;
+}
+
+.titulo-msc h1{
+    font-size: 1rem;
+}
+
+.titulo-msc h2{
+    font-size: .5rem;
+    opacity: .8;
+}
