@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #580f41; 
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(88, 15, 65, 1) 0%, 
+        rgba(18, 18, 18, 1) 100%
+    );
+    font-family: "Inter", 'Times New Roman', Times, serif;
+    width: 100vw;
+    height: 100%;
+    color: white;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.conteiner-capa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 50px 0px;
+}
+
+.conteiner-capa button{
+    font-size: 1.5rem;
+    padding: 15px 0px 15px 15px;
+    border: none;
+    background-color: transparent;
+    transition: background-color .5s ease;
+    cursor: pointer;
+    justify-self: flex-start;
+    transform: translateY(-15%);
+    color: white;
+}
+
+.capa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.capa-album{
+    width: 220px;
+    height: 220px;
+    background-image: url(imgs/meu-amor.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+
+    transform: translate(-10%, 5%);
+}
+
+/* --CAPA-- */
+
+.info-album{
+    width: 100%;
+    display: flex;
+    padding: 0px 20px 10px 10px;
+}
+
+.info h1{
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+.ouvintes{
+    width: 100%;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.adicionar-perfil{
+    background-color: #5b4052;
+    padding: 4px 9px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.perfil-user{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil1{
+    padding: 15px;
+    background-image: url(imgs/album1.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transform: translateX(-30%);
+}
+
+#minutes{
+    font-size: .8rem;
+}
+
+#minutes i{
+    font-size: 1rem;
+}
+
+/* --INFO-- */
+/* menu */
+
+.conteiner-menu-album{
+    width: 100%;
+    display: flex;
+    padding: 0px 20px 5px 10px; 
+}
+
+.menu-album{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-album a:hover, .menu-album button:hover{
+    transition: transform .5s ease;
+}
+
+.menu-album a:hover, .menu-album button:hover{
+    transform: scale(1.1);
+}
+
+.nav-menu-left{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-menu-left a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu-right{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-menu-right a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu-right button{
+    border: none;
+    border-radius: 50%;
+    padding: 7px 6px 7px 10px;
+    font-size: 2rem;
+}
+
+.nav-menu-right button i{
+    transform: translateX(100%);
+}
+
+/* --MENU-- */
+/* mscs */
+
+.musicas{
+    padding-bottom: 30px;
+}
+
+.msc{
+    display: flex;
+    width: 100%;
+    height: calc((100vh - 70px) / 10);
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px 0px 10px;
+}
+
+.msc-right{
+    display: flex;
+}
+
+.msc img{
+    width: 50px;
+    height: 50px;
+}
+
+.titulo-msc{
+    padding-left: 10px;
+}
+
+.titulo-msc h1{
+    font-size: 1rem;
+}
+
+.titulo-msc h2{
+    font-size: .5rem;
+    opacity: .8;
+}
+
+/* --MSC-- */
+/* RODAPE MENU */
+
+.menuBottom{
+    width: 100%;
+    color: #d3d3d3;
+    border-top: 2px solid rgb(11, 11, 11);
+}
+
+ul{
+    display: flex;
+    text-align: center;
+}
+
+li{
+    list-style: none;
+    width: 33.5%;
+    height: 100%;
+    padding: 10px;
+    transition: background-color .5s ease;
+}
+
+li i{
+    font-size: 1.3rem;
+}
+
+li p{
+    font-size: .7rem;
+}
+
+li:hover{
+    background-color: var(--cor-primaria);
+}
