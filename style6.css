@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    background-color: #F2F2F7;
+    font-family: "Inter", 'Times New Roman', Times, serif;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header a button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.1);
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.4rem;
+}
+
+header .perfil-user{
+    width: 50px;
+    height: 50px;
+    background-image: url(imgs/meu-amor.JPG);
+    background-size: cover;
+    background-position: 50% 60%;
+    border-radius: 50%;
+}
+
+/* --header-- */
+
+main{
+    padding: 20px 0;
+}
+
+.google{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.conteiner-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.logo{
+    width: 80%;
+    height: 120px;
+    background-image: url(imgs/google.png);
+    background-size: cover;
+    background-position: 50% 60%;
+    border-radius: 50%;
+}
+
+.conteiner-barra-de-pesquisa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 20px;
+}
+
+.pesquisa{
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow .5s ease;
+}
+
+.pesquisa:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.topo{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    cursor: pointer;
+    color: black;
+    transition: transform ease 1s;
+}
+
+.pesquisa.ativo .topo{
+    justify-content: flex-end;
+}
+
+.lista{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease;
+}
+
+.pesquisa.ativo .lista{
+    max-height: 400px;
+}
+
+.item{
+    padding: 18px 20px;
+    color: black;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.item:hover{
+    background: rgba(0, 0, 0, .08);
+}
+
+.google a{
+    text-decoration: none;
+    color: black;
+}

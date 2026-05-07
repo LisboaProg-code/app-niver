@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Config do meu amor</title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+<body>
+    
+    <header>
+
+        <a href="index.html">
+            <button class="return">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
+        </a>
+
+        <h1>Ajustes</h1>
+
+    </header>
+
+    <div class="container-config">
+
+        <div class="config">
+
+            <div class="item">
+
+                <div class="item-right">
+                    <div class="imagem img1 "></div>
+                    <div class="nome">beijos</div>
+                </div>
+
+                <div class="botao" data-config="beijos"> 
+                    <div class="bola"></div>
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="item-right">
+                    <div class="imagem img1 "></div>
+                    <div class="nome">brincadeiras</div>
+                </div>
+
+                <div class="botao" data-config="brincadeiras">
+                    <div class="bola"></div>
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="item-right">
+                    <div class="imagem img1 "></div>
+                    <div class="nome">ciumes</div>
+                </div>
+
+                <div class="botao" data-config="ciumes">
+                    <div class="bola"></div>
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="item-right">
+                    <div class="imagem img1 "></div>
+                    <div class="nome">lealdade</div>
+                </div>
+
+                <div class="botao" data-config="lealdade">
+                    <div class="bola"></div>
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="item-right">
+                    <div class="imagem img1 "></div>
+                    <div class="nome">amor</div>
+                </div>
+
+                <div class="botao" data-config="amor">
+                    <div class="bola"></div>
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="item-right">
+                    <div class="imagem img1 "></div>
+                    <div class="nome">carencia</div>
+                </div>
+
+                <div class="botao" data-config="carencia">
+                    <div class="bola"></div>
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="item-right">
+                    <div class="imagem img1 "></div>
+                    <div class="nome" >carinhoso</div>
+                </div>
+
+                <div class="botao" data-config="carinhoso">
+                    <div class="bola"></div>
+                </div>
+
+            </div>
+
+            <div class="item item-final">
+
+                <div class="item-right">
+                    <div class="imagem img1 "></div>
+                    <div class="nome">risadas</div>
+                </div>
+
+                <div class="botao" data-config="risadas">
+                    <div class="bola"></div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+    <script>
+
+        
+        const botoes = document.querySelectorAll(".botao");
+
+        botoes.forEach(botao => {
+
+            const nome = botao.dataset.config;
+
+            // carregar estado salvo
+            if(localStorage.getItem(nome) === "true"){
+                botao.classList.add("ativo");
+            }
+
+            botao.addEventListener("click", () => {
+
+                botao.classList.toggle("ativo");
+
+                localStorage.setItem(
+                    nome,
+                    botao.classList.contains("ativo")
+                );
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
