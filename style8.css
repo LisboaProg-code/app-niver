@@ -54,8 +54,23 @@ main{
     padding-bottom: 50px;
 }
 
+.conteiner-pergunta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pergunta{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .pergunta h1{
     font-weight: 400;
+    font-size: 1.4rem;
 }
 
 .conteiner-escolha{
@@ -111,3 +126,58 @@ main{
 }
 
 /* leaderbord */
+
+/* leaderboard */
+
+.leaderboard{
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.leaderboard h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.placar{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.player{
+    width: 100%;
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.player span{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.player strong{
+    font-size: 1rem;
+    font-weight: 400;
+}

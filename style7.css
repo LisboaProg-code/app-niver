@@ -88,9 +88,47 @@ header h1{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(imgs/config.jpg);
-
+    
     border-radius: 15px;
+}
+
+.img1{
+    background-image: url(imgs/config.jpg);
+}
+
+.img2{
+    background-size: 200%;
+    background-image: url(imgs/beijo-config.png);
+}
+
+.img3{
+    background-image: url(imgs/ciumes.png);
+    background-size: 250%;
+}
+
+.img4{
+    background-image: url();
+    background-size: ;
+}
+
+.img5{
+    background-image: url();
+    background-size: ;
+}
+
+.img6{
+    background-image: url();
+    background-size: ;
+}
+
+.img7{
+    background-image: url();
+    background-size: ;
+}
+
+.img8{
+    background-image: url();
+    background-size: ;
 }
 
 .item-right .nome{
