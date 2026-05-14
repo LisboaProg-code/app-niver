@@ -4,116 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiktok do meu amor</title>
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <link rel="stylesheet" href="style3.css">
+    <script src="script3.js" defer></script>
 </head>
 <body>
     
     <header>
-
-        <a href="index.html">
-            <button class="return">
-                <i class="ri-arrow-left-s-line"></i>
-            </button>
-        </a>
-
+        <a href="index.html"><button class="return"><i class="ri-arrow-left-s-line"></i></button></a>
         <div class="menu-tittles">
-            <h1>Seguindo</h1>
-            <h1>Para você</h1>            
+            <span>Seguindo</span>
+            <span class="active">Para você</span>            
         </div>
-
-        <button class="search">
-            <i class="ri-search-line"></i>
-        </button>
-
+        <button class="search"><i class="ri-search-line"></i></button>
     </header>
 
     <main>
+        <div class="feed" id="feed"></div>
 
-        <div class="feed">
-
-            <section class="slide">
-                <video src="#" muted loop></video>
-                <div class="repostado">
-                    <p>Republicado por Lisboa</p>
-                </div>
-
-                <div class="overlay">
-
-                    <div class="menu-lateral">
-                        <div class="foto-perfil"></div>
-
-                        <div class="curtida">
-                            <i class="ri-heart-fill"></i>
-                        </div>
-                        
-                        <div class="comentario">
-                            <i class="ri-chat-3-fill"></i>
-                        </div>
-                        
-                        <div class="salvos">
-                            <i class="ri-bookmark-fill"></i>
-                        </div>
-                        
-                        <div class="compartilhar">
-                            <i class="ri-share-forward-fill"></i>
-                        </div>
-                    
-                    </div>
-
-                    <div class="creditos">
-                        <p>@usuario</p>
-                        <p>#amor #relacionamento</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- <section class="slide">
-                <video src="#" muted loop></video>
-            </section>
-
-            <section class="slide">
-                <video src="#" muted loop></video>
-            </section> -->
-
-        </div>
-
-        <div class="rodape">
-
-            <nav class="menu-rodape">
-                
-                <a href="#">
-                    <p><i class="ri-home-2-fill"></i></p>
-                    <p>Início</p>
-                </a>
-
-                <a href="#">
-                    <p><i class="ri-group-line"></i></p>
-                    <p>Amigos</p>
-                </a>
-
-                <div class="conteiner-add-rodape">
-                    <a href="#">
-                        <i class="ri-add-large-line"></i>
-                    </a>
-                </div>
-
-                <a href="#">
-                    <p><i class="ri-chat-2-line"></i></p>
-                    <p>Mensagens</p>
-                </a>
-
-                <a href="#">
-                    <p><i class="ri-user-line"></i></p>
-                    <p>Perfil</p>
-                </a>
-
-            </nav>
-
-        </div>
-
+        <nav class="rodape">
+            <div class="menu-item active"><i class="ri-home-2-fill"></i><p>Início</p></div>
+            <div class="menu-item"><i class="ri-group-line"></i><p>Amigos</p></div>
+            <div class="add-btn"><i class="ri-add-large-line"></i></div>
+            <div class="menu-item"><i class="ri-chat-2-line"></i><p>Mensagens</p></div>
+            <div class="menu-item"><i class="ri-user-line"></i><p>Perfil</p></div>
+        </nav>
     </main>
 
+    <script src="script3.js"></script>
 </body>
 </html>

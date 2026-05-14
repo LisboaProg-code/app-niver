@@ -90,15 +90,18 @@ header h1{
     background-position: center;
     
     border-radius: 15px;
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
 .img1{
-    background-image: url(imgs/config.jpg);
+    background-image: url(imgs/beijo-config.png);
+    background-size: 200%;
 }
 
 .img2{
-    background-size: 200%;
-    background-image: url(imgs/beijo-config.png);
+    background-size: 250%;
+    background-image: url(imgs/brincadeiras.png);
 }
 
 .img3{
@@ -107,13 +110,13 @@ header h1{
 }
 
 .img4{
-    background-image: url();
-    background-size: ;
+    background-image: url(imgs/lealdade.png);
+    background-size: 200%;
 }
 
 .img5{
-    background-image: url();
-    background-size: ;
+    background-image: url(imgs/amor.png);
+    background-size: 200%;
 }
 
 .img6{
@@ -143,6 +146,7 @@ header h1{
     display: flex;
     justify-content: flex-start;
     transition: background-color .5s ease;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
 .bola{

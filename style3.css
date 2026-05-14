@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* AJUSTE NO HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px; /* Ajustado para não colar nas bordas */
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+}
+
+/* Estilo comum para botões do topo */
+.return, .search {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.return:active, .search:active {
+    transform: scale(0.9);
+    background: rgba(255,255,255,0.1);
+}
+
+.menu-tittles {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-tittles span {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+    padding-bottom: 5px;
+    transition: .3s;
+}
+
+.menu-tittles span.active {
+    color: #fff;
+    border-bottom: 3px solid #fff; /* Borda mais grossa igual original */
+}
+
+.feed {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; /* Esconde scroll no Firefox */
+}
+
+.feed::-webkit-scrollbar { display: none; } /* Esconde scroll no Chrome */
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    background-color: #000;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay e Lateral */
+.overlay {
+    position: absolute;
+    bottom: 80px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.menu-lateral {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.foto-perfil {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #ccc;
+    margin-bottom: 10px;
+}
+
+.menu-lateral i {
+    font-size: 30px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.creditos p:first-child {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Rodapé */
+.rodape {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    border-top: 0.5px solid #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu-item {
+    text-align: center;
+    font-size: 10px;
+    color: #888;
+}
+
+.menu-item i { font-size: 24px; }
+
+.add-btn {
+    background: #fff;
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.add-btn {
+    position: relative;
+    width: 45px;
+    height: 28px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* As cores laterais do botão + */
+.add-btn::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    width: 20px;
+    height: 100%;
+    background: #20D5EC;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.add-btn::after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    width: 20px;
+    height: 100%;
+    background: #FF0050;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+/* AJUSTE NO RODAPÉ */
+.rodape {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px; /* Um pouco mais alto para conforto */
+    background: #000;
+    border-top: 0.5px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px; /* Espaço para a barra do iPhone */
+    z-index: 10;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #888;
+    cursor: pointer;
+}
+
+.menu-item.active {
+    color: #fff;
+}
+
+.menu-item i {
+    font-size: 22px;
+}
+
+.menu-item p {
+    font-size: 10px;
+}
+
+/* MENU LATERAL DE INTERAÇÃO */
+.menu-lateral {
+    position: absolute;
+    right: 5px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.item-lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-lateral span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.curtida i.ri-heart-fill {
+    color: #ff0050; /* Cor de quando está curtido */
+}
+
+/* Etiqueta de Republicado */
+/* Etiqueta de Republicado - Estilo TikTok original */
+/* Container invisível que segura a tag e o ícone */
+.repostado-wrapper {
+    position: absolute;
+    top: 77%;
+    left: 12px;
+    display: flex;
+    align-items: center; /* Alinha a tag e o ícone na mesma linha */
+    gap: 8px; /* Espaço entre a tag cinza e o ícone solto */
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* A etiqueta cinza (agora sem o ícone dentro) */
+.repostado-tag {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* O ícone que ficou para fora */
+.icone-fora {
+    font-size: 18px; /* Um pouco maior para destaque */
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 4px rgba(0,0,0,0.5); /* Sombra para aparecer sobre qualquer vídeo */
+}
+
+/* Ajustes menores na foto e texto */
+.ft-republicado {
+    background-image: url(imgs/meu-amor.JPG); 
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.repostado-tag p {
+    font-size: 11px;
+    font-weight: 500;
+    color: #eee;
+}
+
+/* Números abaixo dos ícones laterais */
+.item-lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-lateral span {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 2px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Ajuste na foto de perfil para ter o botãozinho de "+" */
+.foto-perfil {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #444;
+    margin-bottom: 15px;
+}
+
+.foto-perfil::after {
+    content: "+";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff0050;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}

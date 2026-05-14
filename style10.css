@@ -1,0 +1,299 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: -apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background:#000;
+    color:white;
+    overflow:hidden;
+}
+
+/* Estilo específico para o link/botão de retorno */
+.link-return {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.return {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(28, 28, 30, 0.8); /* Cor igual ao menu de anos */
+    color: white;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+}
+
+.return:hover {
+    transform: scale(1.1);
+    background: rgba(44, 44, 46, 0.9);
+}
+
+.return:active {
+    transform: scale(0.9);
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    overflow-y:scroll;
+
+    scroll-snap-type:y mandatory;
+    scrollbar-width:none;
+}
+
+.container::-webkit-scrollbar{
+    display:none;
+}
+
+.mes{
+    min-height:100vh;
+    padding:30px 16px;
+    scroll-snap-align:start;
+}
+
+.titulo{
+    margin-bottom:20px;
+}
+
+.titulo h1{
+    font-size:42px;
+    font-weight:700;
+}
+
+.titulo p{
+    color:#8e8e93;
+    font-size:18px;
+    margin-top:5px;
+}
+
+.semana{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    margin-bottom:10px;
+    color:#8e8e93;
+    text-align:center;
+    font-size:13px;
+}
+
+.semana div{
+    padding:10px 0;
+}
+
+.dias{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:8px;
+}
+
+.dia{
+    aspect-ratio:1/1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:18px;
+    transition:.2s;
+}
+
+.dia:hover{
+    background:rgba(255,255,255,.08);
+}
+
+.vazio{
+    visibility:hidden;
+}
+
+.hoje{
+    background:#0A84FF;
+    font-weight:bold;
+}
+
+/* MENU INFERIOR */
+
+.menu-anos{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:999;
+}
+
+.abrir-menu{
+    border:none;
+    background:#1c1c1e;
+    color:white;
+    padding:14px 28px;
+    border-radius:999px;
+    font-size:16px;
+    font-weight:600;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+    cursor:pointer;
+}
+
+.anos-lista{
+    position:absolute;
+    bottom:70px;
+    left:50%;
+    transform:translateX(-50%) scale(.9);
+
+    width:220px;
+    max-height:350px;
+
+    overflow-y:auto;
+
+    background:#1c1c1e;
+    border-radius:24px;
+
+    padding:10px;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:.25s;
+}
+
+.anos-lista.ativo{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateX(-50%) scale(1);
+}
+
+.ano-btn{
+    width:100%;
+    border:none;
+    background:transparent;
+    color:white;
+    padding:16px;
+    border-radius:14px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.ano-btn:hover{
+    background:rgba(255,255,255,.08);
+}
+
+.ano-container {
+    margin-bottom: 5px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.meses-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 meses por linha */
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.mes-btn {
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: #8e8e93;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mes-btn:hover {
+    background: #0A84FF;
+    color: white;
+}
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo {
+    background: #1c1c1e;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #8e8e93;
+}
+
+.modal-imagens {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.modal-imagens img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilo para os dias que possuem informações */
+.dia.marcado {
+    color: black; /* Cor azul para destacar */
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid rgba(10, 132, 255, 0.3); /* Um aro sutil em volta */
+}
+
+.dia.marcado:hover {
+    background: rgba(10, 132, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Opcional: remover o hover dos dias comuns para não confundir */
+.dia:not(.marcado):not(.hoje):hover {
+    background: transparent;
+    cursor: default;
+}
