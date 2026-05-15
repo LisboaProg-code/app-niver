@@ -15,6 +15,8 @@ body{
     font-family: "Inter", 'Times New Roman', Times, serif;
 }
 
+::-webkit-scrollbar{display: none;}
+
 header{
     width: 100%;
     display: flex;
@@ -75,23 +77,30 @@ main{
     border-radius: 50%;
 }
 
-.conteiner-barra-de-pesquisa{
+.conteiner-barra-de-pesquisa {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
     padding: 20px;
+    min-height: 90px; 
+    position: relative; /* Referência para o filho absoluto */
 }
 
-.pesquisa{
-    width: 100%;
+.pesquisa {
+    position: absolute; 
+    top: 20px; /* Alinhado ao padding do pai */
+    width: calc(100% - 40px); /* Largura total menos o padding lateral */
     background: white;
     border-radius: 20px;
     overflow: hidden;
     transition: .4s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: box-shadow .5s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100; /* Garante que fique acima da notícia */
+}
+
+.pesquisa.ativo {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .pesquisa:hover{
