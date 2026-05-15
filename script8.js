@@ -46,14 +46,16 @@ const perguntas = [
     "Quem fala mais 'eu te amo'?",
     "Quem sente mais saudades?",
     "Quem é mais dramático?",
-    "Quem faria surpresa romântica?",
+    "Quem reclama mais do calor/frio?",
     "Quem tem mais chance de esquecer algo?",
-    "Quem é mais carente?",
+    "Quem tem as crises de riso nas horas mais inapropriadas?",
     "Quem é mais engraçado?",
     "Quem fica mais bravo rápido?",
     "Quem seria mais provável chorar em filme?",
-    "Quem faz mais birra?",
-    "Quem tem mais chance de acordar de mau humor?"
+    "Quem manda mais Reels ou TikToks durante o dia?",
+    "Quem tem mais chance de acordar de mau humor?",
+    "Quem seria o primeiro a ser enganado por uma notícia falsa?",
+    "Quem começou o primeiro assunto de todos?",
 ]
 
 /* pontuação */
@@ -180,7 +182,7 @@ function mostrarResultadoFinal(){
 
     /* mudar pergunta */
 
-    pergunta.innerHTML = "Resultado final 🏆"
+    pergunta.innerHTML = "Quantidade de votos"
     leaderboard.style.transform = "translateY(-40%)"
 
     /* atualizar placar */
