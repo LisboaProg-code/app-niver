@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,6 +9,7 @@ body {
     background-color: #000;
     color: #fff;
     overflow: hidden;
+    height: 100dvh;
 }
 
 a{

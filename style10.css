@@ -19,10 +19,14 @@ body{
     overflow:hidden;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* Estilo específico para o link/botão de retorno */
 .link-return {
     position: fixed;
-    top: 20px;
+    top: 25px;
     left: 20px;
     z-index: 999;
 }
@@ -42,10 +46,10 @@ body{
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     font-size: 1.5rem;
+    transform: translate(30%, 30%);
 }
 
 .return:hover {
-    transform: scale(1.1);
     background: rgba(44, 44, 46, 0.9);
 }
 

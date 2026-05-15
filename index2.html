@@ -7,6 +7,7 @@
     <title>Galeria do meu amor</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="script2.js" defer></script>
 </head>
 <body>
     
@@ -93,6 +94,29 @@
         </div>
 
     </main>
+
+    <div class="album-overlay" id="albumOverlay">
+        <div class="overlay-header">
+            <button class="close-overlay" id="closeOverlay">
+                <i class="ri-close-line"></i>
+            </button>
+            <h2 id="overlayTitle">Nome do Álbum</h2>
+            <div style="width: 45px;"></div> <!-- Spacer para centralizar o título -->
+        </div>
+        
+        <div class="overlay-content">
+            <!-- As fotos do álbum serão inseridas aqui via JS -->
+            <div class="photo-grid" id="photoGrid"></div>
+        </div>
+    </div>
+
+    <!-- Visualizador da Imagem em Tela Cheia -->
+    <div class="image-viewer" id="imageViewer">
+        <button class="close-viewer" id="closeViewer">
+            <i class="ri-close-line"></i>
+        </button>
+        <img src="" alt="Imagem Expandida" id="fullImage">
+    </div>
 
 </body>
 </html>
