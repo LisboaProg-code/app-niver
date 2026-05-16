@@ -85,10 +85,11 @@ header {
     background-color: #000;
 }
 
-video {
+video, iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: none; /* Remove bordas feias que o iframe traz por padrão */
 }
 
 /* Overlay e Lateral */
@@ -100,6 +101,12 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    pointer-events: none; /* Faz o clique atravessar a div para atingir o vídeo */
+}
+
+/* Reativa os cliques APENAS nos botões da lateral e nos textos, senão eles param de funcionar */
+.menu-lateral, .creditos, .repostado-wrapper {
+    pointer-events: auto;
 }
 
 .menu-lateral {
