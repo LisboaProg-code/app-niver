@@ -109,6 +109,10 @@ main{
     display: none;
 }
 
+#h1-tittle{
+    font-size: 1.3rem;
+}
+
 /* ===== HOVER ===== */
 
 .bloco:hover{
@@ -160,6 +164,8 @@ main{
     transform .5s ease .2s;
 
     pointer-events: none;
+
+    gap: 20px;
 }
 
 /* ===== MOSTRA CONTEÚDO ===== */
@@ -183,7 +189,8 @@ main{
 }
 
 .top-menu h1{
-    transform: translateX(30%);
+    transform: translateX(20%);
+    font-size: 1.5rem;
 }
 
 .top-menu button{

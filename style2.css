@@ -144,7 +144,7 @@ main{
 }
 
 .album{
-    background-image: url(imgs/album1.jpeg);
+    background-image: url(imgs/fotos-livia/);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -168,6 +168,22 @@ main{
 
 .album:hover{
     transform: scale(1.05);
+}
+
+.album1{
+    background-image: url(imgs/fotos-livia/eu-ela/noises.jpeg);
+}
+
+.album2{
+    background-image: url(imgs/fotos-livia/ela/formatura.jpg);
+}
+
+.album3{
+    background-image: url(imgs/fotos-livia/ela-amiga/emilly5.jpg);
+}
+
+.album4{
+    background-image: url(imgs/fotos-livia/ela-familia/amor-sogra.jpg);
 }
 
 /* --ALBUM-- */

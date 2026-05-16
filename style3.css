@@ -69,7 +69,7 @@ header {
 }
 
 .feed {
-    height: 100vh;
+    height: 100dvh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scrollbar-width: none; /* Esconde scroll no Firefox */
@@ -80,7 +80,7 @@ header {
 .slide {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     scroll-snap-align: start;
     background-color: #000;
 }
@@ -356,4 +356,27 @@ video, iframe {
     justify-content: center;
     font-size: 14px;
     font-weight: bold;
+}
+
+/* Ajuste na foto de perfil lateral */
+.foto-perfil {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #444; /* Fundo padrão caso falte imagem */
+    background-size: cover; /* Faz a foto preencher o círculo sem distorcer */
+    background-position: center; /* Centraliza o rosto na foto */
+    margin-bottom: 15px;
+}
+
+/* Ajustes na foto menor da etiqueta de Republicado */
+.ft-republicado {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    /* Removido o background-image fixo daqui, pois agora o JS controla */
 }
