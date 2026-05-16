@@ -61,6 +61,7 @@ header{
 .app{
     border-radius: 10px;
     width: 85%;
+    max-width: 65px;
     height: 65px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -74,39 +75,39 @@ header{
 }
 
 .gallery{
-    background-image: url(imgs/gallery.jpg);
+    background-image: url(imgs/apps/gallery.jpg);
 }
 
 .calendario{
-    background-image: url(imgs/calendario.jpeg);
+    background-image: url(imgs/apps/calendario.jpeg);
 }
 
 .config{
-    background-image: url(imgs/config.jpg);
+    background-image: url(imgs/apps/config.jpg);
 }
 
 .google{
-    background-image: url(imgs/google.jpg);
+    background-image: url(imgs/apps/google.jpg);
 }
 
 .bloco-de-notas{
-    background-image: url(imgs/bloco-de-nota.jpg);
+    background-image: url(imgs/apps/bloco-de-nota.jpg);
 }
 
 .quiz{
-    background-image: url(imgs/quiz.png);
+    background-image: url(imgs/apps/quiz.png);
 }
 
 .ttk{
-    background-image: url(imgs/ttk.jpg);
+    background-image: url(imgs/apps/ttk.jpg);
 }
 
 .spotify{
-    background-image: url(imgs/spotify.jpg);
+    background-image: url(imgs/apps/spotify.jpg);
 }
 
 .zap{
-    background-image: url(imgs/zap.jpg);
+    background-image: url(imgs/apps/zap.jpg);
 }
 
 .centro-app{
@@ -124,3 +125,165 @@ header{
     background-image: url(imgs/gift.png);
 }
 
+#main-lock-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(imgs/meu-amor.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000; /* Fica acima da tela de senha (9999) */
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    transition: transform 0.6s cubic-bezier(0.1, 1, 0.1, 1), opacity 0.5s ease;
+}
+
+/* Relógio e Data */
+.time-container {
+    margin-top: 100px;
+    text-align: center;
+}
+.date {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.time {
+    font-size: 85px;
+    font-weight: 200;
+    letter-spacing: -2px;
+}
+
+/* Texto de instrução */
+.swipe-instruction {
+    margin-bottom: 60px;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    animation: breathe 3s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Quando deslizar, joga a tela do relógio para cima */
+#main-lock-screen.hidden {
+    transform: translateY(-100vh);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#lock-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Fundo escurecido */
+  backdrop-filter: blur(20px); /* Efeito de desfoque do iOS */
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: transform 0.6s cubic-bezier(0.1, 1, 0.1, 1), opacity 0.5s ease;
+}
+
+/* Container centralizado */
+.lock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.passcode-header {
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Bolinhas de Senha */
+.dots-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+
+.dot.active {
+  background-color: #fff; /* Preenche a bolinha */
+}
+
+/* Teclado */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 75px);
+  gap: 15px 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Botões Circulares do iPhone */
+.key {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Remove o azul do clique */
+  transition: background 0.1s ease;
+}
+
+.key:active {
+  background: rgba(255, 255, 255, 0.4); /* Efeito de clique do iOS */
+}
+
+/* Botão de Apagar */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Animação de Erro (Shake) */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Classe para esconder a tela de bloqueio jogando para cima */
+.lock-screen-hidden {
+  transform: translateY(-100vh);
+  opacity: 0;
+  pointer-events: none;
+}

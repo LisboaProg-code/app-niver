@@ -95,42 +95,42 @@ header h1{
 }
 
 .img1{
-    background-image: url(imgs/bejios-2.png);
+    background-image: url(imgs/config/beijo.png);
     background-size: 200%;
 }
 
 .img2{
     background-size: 200%;
-    background-image: url(imgs/brincadeiras-2.png);
+    background-image: url(imgs/config/bricandeiras.png);
 }
 
 .img3{
-    background-image: url(imgs/ciumes-2.png);
+    background-image: url(imgs/config/ciumes.png);
     background-size: 200%;
 }
 
 .img4{
-    background-image: url(imgs/lealdade-2.png);
+    background-image: url(imgs/config/lealdade.png);
     background-size: 200%;
 }
 
 .img5{
-    background-image: url(imgs/amor-2.png);
+    background-image: url(imgs/config/amor.png);
     background-size: 200%;
 }
 
 .img6{
-    background-image: url(imgs/carencia.png);
+    background-image: url(imgs/config/carencia.png);
     background-size: 200%;
 }
 
 .img7{
-    background-image: url(imgs/carinhoso.png);
+    background-image: url(imgs/config/carinhoso.png);
     background-size: 200%;
 }
 
 .img8{
-    background-image: url(imgs/risadas.png);
+    background-image: url(imgs/config/risadas.png);
     background-size: 200%;
 }
 

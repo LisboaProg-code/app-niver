@@ -35,37 +35,21 @@
                         <i class="ri-search-line"></i>
                     </div>
                     <div class="lista">
-                        
-                        <a href="#">
-                            <div class="item">
-                                Resultado 1
-                            </div>
+                        <a href="https://lisboaprog-code.github.io/meu-amor/" class="link-pesquisa">
+                            <div class="item">Meu amor</div>
                         </a>
 
-                        <a href="#">
-                            <div class="item">
-                                Resultado 1
-                            </div>
+                        <a href="https://lisboaprog-code.github.io/Pedido/" class="link-pesquisa">
+                            <div class="item">Pedido</div>
                         </a>
 
-                        <a href="#">
-                            <div class="item">
-                                Resultado 1
-                            </div>
+                        <a href="https://lisboaprog-code.github.io/Li/" class="link-pesquisa">
+                            <div class="item">Primeiro site</div>
                         </a>
 
-                        <a href="#">
-                            <div class="item">
-                                Resultado 1
-                            </div>
+                        <a href="https://lisboaprog-code.github.io/teatro/" class="link-pesquisa">
+                            <div class="item">Teatro Convite</div>
                         </a>
-
-                        <a href="#">
-                            <div class="item">
-                                Resultado 1
-                            </div>
-                        </a>
-                        
                     </div>
                 </div>
             </div>
@@ -116,10 +100,25 @@
     <script>
 
         const pesquisa = document.querySelector(".pesquisa");
+        const topoPesquisa = document.querySelector(".topo"); // Seleciona especificamente a área do ícone
+        const links = document.querySelectorAll(".link-pesquisa");
 
-        pesquisa.addEventListener("click", () => {
+        topoPesquisa.addEventListener("click", (e) => {
+            e.stopPropagation(); // Evita que o clique se espalhe
             pesquisa.classList.toggle("ativo");
         });
+
+        links.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.stopPropagation(); // Garante que o clique vai direto para o href
+            });
+        });
+
+        document.body.addEventListener("click", () => {
+            pesquisa.classList.remove("ativo");
+        });
+
+        
 
     </script>
 

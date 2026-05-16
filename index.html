@@ -5,10 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia do bolo do meu amor</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script1.js" defer></script>
 </head>
 <body>
 
+    <div id="main-lock-screen">
+        <div class="time-container">
+            <div class="date">Sexta-feira, 15 de maio</div>
+            <div class="time">20:16</div>
+        </div>
+        
+        <div class="swipe-instruction">
+            Deslize para cima para inserir a senha
+        </div>
+    </div>
+
     
+    <div id="lock-screen">
+        <div class="lock-container">
+            
+            <div class="passcode-header">Digite a Senha</div>
+            <div class="dots-container" id="dots-container">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <div class="keypad">
+                <button class="key" onclick="pressKey('1')">1</button>
+                <button class="key" onclick="pressKey('2')">2</button>
+                <button class="key" onclick="pressKey('3')">3</button>
+                
+                <button class="key" onclick="pressKey('4')">4</button>
+                <button class="key" onclick="pressKey('5')">5</button>
+                <button class="key" onclick="pressKey('6')">6</button>
+                
+                <button class="key" onclick="pressKey('7')">7</button>
+                <button class="key" onclick="pressKey('8')">8</button>
+                <button class="key" onclick="pressKey('9')">9</button>
+                
+                <div></div> <button class="key" onclick="pressKey('0')">0</button>
+                <button class="delete-btn" onclick="deleteKey()">Apagar</button>
+            </div>
+
+        </div>
+    </div>
+
     <main>
         
         <section class="conteiner">
