@@ -53,7 +53,7 @@ body{
 .capa-album{
     width: 220px;
     height: 220px;
-    background-image: url(imgs/meu-amor.JPG);
+    background-image: url(imgs/spotify.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 60%;
@@ -97,7 +97,7 @@ body{
 
 .perfil1{
     padding: 15px;
-    background-image: url(imgs/album1.jpeg);
+    background-image: url(imgs/eu-e-meu-amor.jpeg);
     background-size: cover;
     background-position: center;
     border-radius: 50%;

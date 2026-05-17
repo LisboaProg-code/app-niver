@@ -260,6 +260,14 @@ button {
     position: relative;
 }
 
+#modalTitulo{
+    font-size: 1.3rem;
+}
+
+.modal-conteudo h2{
+    padding-bottom: 20px;
+}
+
 .fechar {
     position: absolute;
     right: 20px;
@@ -281,6 +289,7 @@ button {
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
+    object-position: center;
 }
 
 /* Estilo para os dias que possuem informações */

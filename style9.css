@@ -99,34 +99,60 @@ main{
     padding: 10px 5px;
 }
 
-.conversa-left{
-    width: 100%;
+.conversa-left {
+    flex: 1; 
     display: flex;
     gap: 20px;
+    align-items: center; /* Centraliza verticalmente a foto e os textos */
 }
 
 .conversa-left .photo{
-    width: 80px;
+    width: 50px;
     height: 50px;
-    background-image: url(imgs/meu-amor.JPG);
     background-size: cover;
     background-position: center;
     border-radius: 50%;
 }
 
-.user-conversa{
-    width: 100%;
+.ft1{
+    background-image: url(imgs/zap/eu.jpeg);
+}
+
+.ft2{
+    background-image: url(imgs/zap/emilly.jpeg);
+}
+
+.ft3{
+    background-image: url(imgs/zap/esther.jpeg);
+}
+
+.ft4{
+    background-image: url(imgs/zap/mylena.jpeg);
+}
+
+.ft5{
+    background-image: url(imgs/zap/l-c.jpg);
+}
+
+.ft6{
+    background-image: url(imgs/zap/duda.jpeg);
+}
+
+.user-conversa {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    gap: 5px; 
 }
 
-.horario-naolida{
-    width: 100%;
+.horario-naolida {
+    /* Removido width: 100% para ele não pular para baixo */
     display: flex;
     flex-flow: column;
     justify-content: space-between;
     align-items: flex-end;
+    flex-shrink: 0; /* Impede que o horário seja esmagado */
+    gap: 8px; /* Cria um espaçamento bacana entre a hora e a bolinha */
 }
 
 .horario-naolida .hora{
@@ -197,7 +223,7 @@ footer{
 .menu-bottom .voce .perfil-user{
     width: 35px;
     height: 35px;
-    background-image: url(imgs/meu-amor.JPG);
+    background-image: url(imgs/fotos-livia/meu-amor.JPG);
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -472,20 +498,20 @@ footer{
     cursor: pointer;
 }
 
-.barra-audio{
+.barra-audio {
     width: 120px;
     height: 5px;
-
-    background: rgba(255,255,255,.2);
-
+    background: rgba(255, 255, 255, 0.24); /* Fundo cinza/branco transparente */
     border-radius: 999px;
-    overflow: hidden;
+    position: relative;
 }
 
-.progresso-audio{
+.progresso-audio {
     width: 0%;
     height: 100%;
-    background: white;
+    background: #00a884; /* Cor verde do WhatsApp para o progresso */
+    border-radius: 999px;
+    transition: width 0.1s linear; /* Deixa o movimento do áudio suave */
 }
 
 /* visualizado */

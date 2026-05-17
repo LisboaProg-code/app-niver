@@ -1,14 +1,60 @@
 const informacoesDatas = {
-    "20-4-2024": {
-        titulo: "Viagem para a Praia",
-        desc: "Dia incrível de sol com a galera.",
-        fotos: ["praia1.jpg", "praia2.jpg"]
+    "16-4-2008": {
+        titulo: "Lívia Nasceu",
+        desc: "Nascimento da protagonista da história",
+        fotos: ["imgs/calendario/nascimento.jpg", "imgs/calendario/alvaro.jpg"]
     },
-    "14-4-2026": {
-        titulo: "Aniversário",
-        desc: "Comemorando mais um ano!",
-        fotos: ["bolo.jpg", "festa.jpg"]
-    }
+    "15-1-2023": {
+        titulo: "Entrei no Álvaro",
+        desc: "No Álvaro começou tudo",
+        fotos: ["imgs/calendario/alvaro.JPG", "imgs/calendario/alvaro2.jpg"]
+    },
+
+    "14-7-2025": {
+        titulo: "Gincana",
+        desc: "Onde virei amiga de muita gente (ainda mais eu criador do site)",
+        fotos: ["imgs/calendario/gincana1.jpg", "imgs/calendario/gincana2.jpg"]
+    },
+    "2-8-2025": {
+        titulo: "Começamos a conversar",
+        desc: "Mario deu o primeiro passo (sou o fodao)",
+        fotos: ["imgs/calendario/conversar.jpg", "imgs/calendario/conversar2.jpg"]
+    },
+    "13-8-2025": {
+        titulo: "Primeiro beijo",
+        desc: "Demos o primeiro beijo (sonho realizado)",
+        fotos: ["imgs/calendario/nos-escola.jpg"]
+    },
+    "29-10-2025": {
+        titulo: "Primeiro encontro",
+        desc: "Fomos pro Teatro com Gio, Emilly e Mikael",
+        fotos: ["imgs/calendario/nos4.jpg"]
+    },
+    "14-11-2025": {
+        titulo: "Me formei",
+        desc: "Terminei o ensino médio",
+        fotos: ["imgs/calendario/formatura.jpg", "imgs/calendario/formatura2.jpg" ]
+    },
+    "30-11-2025": {
+        titulo: "Piscina ano novo",
+        desc: "Dia da piscina e quando a gente voltou a conversar desde o dia 24",
+        fotos: ["imgs/calendario/piscina.jpg", "imgs/calendario/nos3.jpg"]
+    },
+    "7-1-2026":{
+        titulo: "Voltamos a ser nós",
+        desc: "O dia que eu mandei mensagem pra voltarmos (eu aceitei claramente, tava quase morrendo)",
+        fotos: ["imgs/calendario/nos.jpg", "imgs/calendario/nos4.jpg"]
+    },
+    "13-3-2026": {
+        titulo: "Fui pedida em namoroo",
+        desc: "Fui pedida em namoro no Evaldo Cruz, num piquenique (melhor dia da minha vida)",
+        fotos: ["imgs/calendario/namoro.jpg", "imgs/calendario/namoro3.jpeg"]
+    },
+    "16-4-2026": {
+        titulo: "18tao",
+        desc: "Minha festa de peruca de 18 anos",
+        fotos: ["imgs/calendario/18.png", "imgs/calendario/18-2.jpeg"]
+    },
 };
 
 const meses = [
@@ -154,11 +200,27 @@ function abrirModal(dia, mes, ano) {
         document.getElementById("modalTitulo").textContent = info.titulo;
         document.getElementById("modalDescricao").textContent = info.desc;
         
-        const imgs = document.querySelectorAll(".modal-imagens img");
-        if(info.fotos && imgs.length >= 2) {
-            imgs[0].src = info.fotos[0];
-            imgs[1].src = info.fotos[1];
+        // Seleciona o container onde as imagens devem ficar
+        const containerImagens = document.querySelector(".modal-imagens");
+        
+        // Limpa as imagens antigas para não acumular fotos de cliques anteriores
+        containerImagens.innerHTML = "";
+
+        // Verifica se existem fotos cadastradas nesta data
+        if(info.fotos && info.fotos.length > 0) {
+            // Cria uma tag <img> para cada foto que você colocou na lista daquela data
+            info.fotos.forEach((fotoUrl, index) => {
+                const novaImg = document.createElement("img");
+                
+                // IMPORTANTE: Ajuste o caminho se suas fotos estiverem dentro de uma pasta (ex: "imgs/" + fotoUrl)
+                novaImg.src = fotoUrl; 
+                novaImg.alt = `${info.titulo} - Imagem ${index + 1}`;
+                
+                // Adiciona a nova imagem dentro do modal
+                containerImagens.appendChild(novaImg);
+            });
         }
+        
         modal.style.display = "flex";
     }
 }
