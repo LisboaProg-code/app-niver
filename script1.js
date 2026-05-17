@@ -72,7 +72,7 @@ function subirTelaLock() {
 }
 
 // --- CONFIGURAÇÃO DA SENHA DE 6 DÍGITOS ---
-const SENHA_CORRETA = "160408"; 
+const SENHA_CORRETA = "160508"; 
 let senhaDigitada = "";
 
 function pressKey(num) {
